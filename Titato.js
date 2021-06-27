@@ -1,4 +1,5 @@
 var winner=1;
+var draw=0;
 var audio = new Audio("Touch_Sound_Effect_(Private_Only)(128k).mp3");
 var audio_win = new Audio("win_sound(128k).mp3");
 var all_full=0;
