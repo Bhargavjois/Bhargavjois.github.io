@@ -36,8 +36,12 @@ function change(i){
       audio.playbackRate=4.0;
     }
   }
- win_check();
  draw_check();
+   if (draw){
+     document.getElementById("mid").innerHTML="Draw";
+      document.getElementById("mid").style.color="red";
+   }
+ win_check();
  }
 }
 
@@ -85,7 +89,16 @@ function win_check(){
 }            
 
 function draw_check(){
-  
+  var tile_info=document.getElementsByClassName("tile");
+  for(var t=0;t<9;t++){
+      if (tile_info[t].innerText=="x" || tile_info[t].innerText=="o"){
+        draw=1;
+      }
+      else{
+        draw=0;
+        break;
+      }
+  }  
 }
             
 function refresh(){
